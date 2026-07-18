@@ -1,0 +1,6 @@
+{
+  "name": "Orion Residence Bukit Bintang",
+  "description": "An ultra-luxury landing page for Orion Residence in Bukit Bintang, Kuala Lumpur, featuring elegant floor plans, premium specs, surrounding prestigious hotspot details, and booking inquiries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

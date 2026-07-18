@@ -1,0 +1,27 @@
+# Global Robots Configuration - Orion Residence Bukit Bintang
+# Optimized for Traditional Search Engines (Google, Bing, Yahoo) and Generative AI Engines (GEO / AISEO)
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dist/
+Disallow: /node_modules/
+
+# AI Crawler agents explicitly allowed to index the portfolio and structure
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap Location
+Sitemap: https://orionresidence.my/sitemap.xml

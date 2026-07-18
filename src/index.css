@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-gold-50: #fefdf6;
+  --color-gold-100: #faf6e8;
+  --color-gold-200: #f5edcf;
+  --color-gold-300: #ebd89b;
+  --color-gold-400: #e0bf67;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b89326;
+  --color-gold-700: #8f701c;
+  --color-gold-800: #664f15;
+  --color-gold-900: #3d2f0d;
+
+  /* Luxury Dark Blue Theme Palette */
+  --color-navy-950: #030611; /* Deepest luxurious midnight navy */
+  --color-navy-900: #060b1e; /* Main background dark blue */
+  --color-navy-850: #0b1129; /* Deep blue section background */
+  --color-navy-800: #10193b; /* Card / container dark blue */
+  --color-navy-700: #192654; /* Border / light navy hover state */
+  --color-navy-600: #243570;
+
+  /* Luxury Brown/Bronze Palette */
+  --color-brown-300: #c6a382;
+  --color-brown-400: #a38052;
+  --color-brown-500: #8c6239; /* Rich copper/bronze brown */
+  --color-brown-600: #6e4726; /* Dark golden brown */
+  --color-brown-700: #54341b;
+  --color-brown-800: #3a220f;
+}
+
+/* Custom premium smooth scrolling and layout helpers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for layout containers while maintaining scrolling functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Premium gradient animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, #060b1e 25%, #10193b 50%, #060b1e 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Soft gold ambient glow */
+.gold-glow {
+  box-shadow: 0 0 40px -5px rgba(212, 175, 55, 0.1);
+}
+
+.gold-border-glow:hover {
+  box-shadow: 0 0 25px -3px rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Luxury visual effects */
+.bg-gold-brown-radial {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(110, 71, 38, 0.04) 60%, transparent 100%);
+}
+
+.bg-gold-brown-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #a38052 50%, #6e4726 100%);
+}
+
+.text-gold-brown-gradient {
+  background: linear-gradient(135deg, #f5d77f 0%, #d4af37 45%, #a38052 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-brown-glow {
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 0 20px rgba(110, 71, 38, 0.1);
+}
+
+.border-gold-brown-glow:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+}
