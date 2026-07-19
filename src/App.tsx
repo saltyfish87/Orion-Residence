@@ -846,6 +846,8 @@ export default function App() {
 
   // Layout selection
   const [selectedUnitId, setSelectedUnitId] = useState("Type-A1");
+  const [floorPlanLightboxOpen, setFloorPlanLightboxOpen] = useState(false);
+  const [showAllSpecs, setShowAllSpecs] = useState(false);
 
   // Google Ads compliance states
   const [activePolicyModal, setActivePolicyModal] = useState<"privacy" | "terms" | "disclaimer" | null>(null);
@@ -1062,7 +1064,7 @@ export default function App() {
       </nav>
 
       {/* HERO SECTION WITH PARALLAX BACKGROUND */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-navy-950">
+      <section className="relative min-h-screen md:h-screen flex flex-col justify-between items-center overflow-hidden bg-navy-950 pt-28 pb-12 md:py-0">
         {/* Parallax Background */}
         <div
           className="absolute inset-0 z-0 scale-105 transition-transform duration-100 ease-out"
@@ -1078,7 +1080,7 @@ export default function App() {
           <div className="absolute inset-0 bg-radial-gradient(ellipse_at_center,transparent_30%,rgba(6,11,30,0.85)_100%)" />
         </div>
 
-        <div className="relative z-20 max-w-5xl mx-auto px-6 text-center mt-12 flex flex-col items-center">
+        <div className="relative z-20 max-w-5xl mx-auto px-6 text-center flex flex-col items-center my-auto">
           <div className="flex items-center gap-3 mb-6 animate-fade-in">
             <span className="h-[1px] w-8 bg-gold-500/50" />
             <span className="text-gold-500 font-mono uppercase tracking-[0.4em] text-[11px] font-semibold">
@@ -1119,8 +1121,8 @@ export default function App() {
         </div>
 
         {/* Floating Quick Stats Ribbon */}
-        <div className="absolute bottom-0 left-0 w-full z-30 bg-gradient-to-t from-navy-900 to-transparent pt-12">
-          <div className="max-w-6xl mx-auto px-6 pb-8 border-b border-navy-800/60">
+        <div className="relative md:absolute md:bottom-0 left-0 w-full z-30 bg-gradient-to-t from-navy-900 to-transparent pt-8 md:pt-12 pb-4 md:pb-8 mt-12 md:mt-0">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <p className="text-gold-500 font-mono text-xs uppercase tracking-widest mb-1">{t("Developer")}</p>
@@ -1467,253 +1469,277 @@ export default function App() {
       <section id="layouts" className="py-24 relative bg-navy-850">
         <div className="max-w-7xl mx-auto px-6">
           
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
-            <div>
-              <span className="text-gold-500 font-mono text-xs uppercase tracking-[0.3em] block mb-3">Architectural Precision</span>
-              <h2 className="font-serif text-3xl md:text-5xl font-medium text-white">Residence Floor Plans</h2>
-            </div>
-            {/* Selector Buttons */}
-            <div className="flex flex-wrap gap-2">
+          <div className="mb-10 text-center lg:text-left">
+            <span className="text-gold-500 font-mono text-xs uppercase tracking-[0.3em] block mb-3">Architectural Precision</span>
+            <h2 className="font-serif text-3xl md:text-5xl font-medium text-white">Residence Floor Plans</h2>
+            <p className="text-gray-400 text-sm font-light mt-2 max-w-2xl">
+              Select a luxury suite below to explore architectural layouts designed for light, space, and panoramic views. Click on any layout to view in high resolution.
+            </p>
+          </div>
+
+          {/* Premium Responsive Selector Segment Row */}
+          <div className="relative w-full mb-10 overflow-hidden">
+            {/* Soft Ambient Fade Masks for Mobile Scrolling Indication */}
+            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-navy-850 to-transparent pointer-events-none z-10 md:hidden" />
+            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-navy-850 to-transparent pointer-events-none z-10 md:hidden" />
+            
+            <div className="flex overflow-x-auto no-scrollbar gap-3 pb-2 px-6 -mx-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 lg:grid-cols-6 snap-x">
               {UNIT_TYPES.map((unit) => (
                 <button
                   key={unit.id}
                   onClick={() => {
                     setSelectedUnitId(unit.id);
                   }}
-                  className={`px-4 py-2.5 rounded text-xs uppercase font-mono tracking-widest transition-all duration-300 ${
+                  className={`snap-center px-4 py-3.5 rounded text-[11px] sm:text-xs uppercase font-mono tracking-wider transition-all duration-300 whitespace-nowrap md:whitespace-normal text-center shrink-0 border flex flex-col items-center justify-center gap-1.5 min-w-[150px] md:min-w-0 ${
                     selectedUnitId === unit.id
-                      ? "bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.3)]"
-                      : "bg-navy-800 text-gray-400 border border-navy-700/60 hover:border-gold-500/30 hover:text-white"
+                      ? "bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 text-black font-bold border-gold-500 shadow-[0_0_15px_rgba(212,175,55,0.25)]"
+                      : "bg-navy-800 text-gray-400 border-navy-700/60 hover:border-gold-500/30 hover:text-white"
                   }`}
                 >
-                  {unit.id.replace("-", " ")} ({unit.sizeSqFt} sqft)
+                  <span className="font-bold tracking-widest">{unit.id.replace("-", " ")}</span>
+                  <span className={`text-[9px] font-mono ${selectedUnitId === unit.id ? 'text-black/80' : 'text-gray-500'}`}>{unit.sizeSqFt} SQ FT</span>
                 </button>
               ))}
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="grid lg:grid-cols-12 gap-10 items-start">
             
-            {/* Floor Plan Display Frame */}
-            <div className="lg:col-span-7 flex flex-col">
-              <div className="bg-[#0e0f14] rounded-lg border border-gray-800 p-6 relative shadow-inner overflow-hidden gold-glow min-h-[380px] flex flex-col justify-between">
+            {/* Floor Plan Display Frame - LARGER & SUPER CLEAN */}
+            <div className="lg:col-span-7 flex flex-col space-y-4">
+              <div 
+                onClick={() => setFloorPlanLightboxOpen(true)}
+                className="group relative bg-[#090a0f] rounded-lg border border-gray-800/80 p-6 shadow-2xl overflow-hidden gold-glow flex flex-col justify-between cursor-zoom-in transition-all duration-500 hover:border-gold-500/40"
+              >
+                {/* Architectural Blueprint Style Accents */}
                 <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]" />
-                <div className="absolute top-4 left-4 text-[10px] font-mono text-gray-500 uppercase tracking-widest">
-                  Orion Layout Portfolio
-                </div>
-                <div className="absolute top-4 right-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
-                  <span className="text-[9px] font-mono text-gold-500 uppercase tracking-wider">
-                    High-Resolution Plan
-                  </span>
+                
+                <div className="flex justify-between items-center z-10 mb-4 border-b border-navy-800/60 pb-3">
+                  <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+                    Orion Layout Portfolio
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
+                    <span className="text-[9px] font-mono text-gold-500 uppercase tracking-wider">
+                      Interactive Blueprint
+                    </span>
+                  </div>
                 </div>
 
-                <div className="relative w-full max-w-[440px] mx-auto py-8 flex items-center justify-center min-h-[366px]">
+                {/* Main Visual Image Area */}
+                <div className="relative w-full max-w-[500px] mx-auto py-8 flex items-center justify-center min-h-[300px] sm:min-h-[400px] lg:min-h-[440px]">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={selectedUnitId}
-                      initial={{ opacity: 0, scale: 0.97, y: 8 }}
-                      animate={{ opacity: 1, scale: 1, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.97, y: -8 }}
-                      transition={{ duration: 0.35, ease: "easeOut" }}
+                      initial={{ opacity: 0, scale: 0.96 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.96 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
                       src={floorPlanImages[selectedUnitId] || floorPlanImages["Type-A1"]}
                       alt={`${selectedUnit.name} Layout`}
-                      className="w-full max-h-[300px] object-contain rounded border border-navy-700/60 shadow-xl bg-white/5 p-4 transition-transform duration-500 hover:scale-[1.03]"
+                      className="w-full max-h-[280px] sm:max-h-[380px] lg:max-h-[420px] object-contain rounded transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   </AnimatePresence>
+
+                  {/* Elegant Glassmorphic Zoom Overlay on Hover */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-3 rounded backdrop-blur-[2px]">
+                    <div className="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-400 flex items-center justify-center text-gold-400 shadow-lg">
+                      <Maximize2 className="w-5 h-5" />
+                    </div>
+                    <span className="text-white font-mono text-xs uppercase tracking-widest bg-navy-950/80 px-3 py-1.5 rounded-full border border-gold-500/20 shadow-md">
+                      Click to Expand Plan
+                    </span>
+                  </div>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-navy-800 text-center">
-                  <p className="text-[11px] text-gray-500 font-mono">
-                    💡 Artist's layout visualization. All details, structural columns, and finishes are conceptual and subject to the final sales agreement.
-                  </p>
+                <div className="mt-4 pt-3 border-t border-navy-800/60 text-center flex items-center justify-center gap-2 text-[11px] text-gray-500 font-mono">
+                  <Maximize2 className="w-3.5 h-3.5 text-gold-500/60" />
+                  <span>💡 Tap or click anywhere on the layout above to expand full-screen</span>
                 </div>
               </div>
 
-              {/* Specs Sub-card (Desktop-only, hidden on mobile) */}
-              <div className="hidden lg:block mt-8 bg-navy-900 rounded-lg border border-navy-700/60 p-6">
-                <h3 className="font-serif text-lg text-white mb-4 flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-gold-500" />
-                  Premium Finishings & Structural Specs
-                </h3>
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={selectedUnitId}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="grid md:grid-cols-2 gap-6 text-xs text-gray-400 leading-relaxed font-light"
-                  >
-                    <div className="space-y-4">
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Floor Finishes</p>
-                        <p>{selectedUnit.specs.flooring}</p>
-                      </div>
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Gourmet Cooking Systems</p>
-                        <p>{selectedUnit.specs.kitchen}</p>
-                      </div>
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Smart Door Security</p>
-                        <p>{selectedUnit.specs.lockset}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-4">
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Sanitary Fittings & Bathrooms</p>
-                        <p>{selectedUnit.specs.fittings}</p>
-                      </div>
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Ceiling Details</p>
-                        <p>{selectedUnit.specs.ceiling}</p>
-                      </div>
-                      <div className="pt-2">
-                        <div className="bg-navy-800 p-3 rounded border border-navy-700/40">
-                          <span className="text-[10px] text-gold-500 font-mono uppercase tracking-wider block mb-1">Soundproofing Guarantee</span>
-                          <p className="text-[11px]">Equipped with thick custom party walls achieving a certified acoustic rating of up to 60dB sound dampening.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+              <p className="text-[10px] text-gray-600 font-mono text-center leading-relaxed">
+                * Artist's layout visualization. All details, dimensions, structural layouts, and material representations are conceptual and subject to change without prior notice.
+              </p>
             </div>
 
-            {/* Layout Detail side Info */}
+            {/* Layout Detail Side Info - HIGHLY SIMPLIFIED & CLUTTER-FREE */}
             <div className="lg:col-span-5 space-y-6">
               
-              <div className="bg-navy-900 rounded-lg border border-gold-500/25 p-6 shadow-xl relative overflow-hidden min-h-[500px]">
-                <div className="absolute top-0 left-0 w-1 h-full bg-gold-500" />
+              <div className="bg-navy-900 rounded-lg border border-gold-500/25 p-6 md:p-8 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-gold-500 to-brown-600" />
+                
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={selectedUnitId}
-                    initial={{ opacity: 0, x: 12 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -12 }}
-                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.25 }}
                   >
                     <span className="text-gold-500 font-mono text-xs uppercase tracking-widest block mb-1">{t("Selected Unit")}</span>
-                    <h3 className="font-serif text-2xl text-white font-medium mb-1">{t(selectedUnit.name)}</h3>
+                    <h3 className="font-serif text-2xl md:text-3xl text-white font-semibold mb-1">{t(selectedUnit.name)}</h3>
                     <p className="text-xs text-gold-400 font-mono uppercase tracking-wider mb-4">{t(selectedUnit.subtitle)}</p>
-                    <p className="text-gray-400 text-xs leading-relaxed font-light mb-6">{t(selectedUnit.description)}</p>
+                    
+                    <p className="text-gray-400 text-xs md:text-sm leading-relaxed font-light mb-6">
+                      {t(selectedUnit.description)}
+                    </p>
  
-                     <div className="grid grid-cols-2 gap-4 border-t border-b border-navy-800/60 py-4 mb-6">
-                       <div>
-                         <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Built-up Size")}</span>
-                         <span className="font-serif text-lg text-white font-bold flex items-center gap-1">
-                           {selectedUnit.sizeSqFt} <span className="text-xs font-sans font-light text-gray-400">{t("sq ft")}</span>
-                         </span>
-                         <span className="text-[10px] text-gray-500 block">({selectedUnit.sizeSqM} {t("sq m")})</span>
-                       </div>
-                       <div>
-                         <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Private Rooms")}</span>
-                         <span className="font-serif text-lg text-white font-bold flex items-center gap-2">
-                           <span className="flex items-center gap-1"><Bed className="w-4 h-4 text-gold-400" /> {selectedUnit.bedrooms}</span>
-                           <span className="flex items-center gap-1"><Bath className="w-4 h-4 text-gold-400" /> {selectedUnit.bathrooms}</span>
-                         </span>
-                       </div>
-                       <div>
-                         <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Balcony Facing")}</span>
-                         <span className="text-xs text-white font-medium flex items-center gap-1">
-                           <Compass className="w-3.5 h-3.5 text-gold-400" /> {selectedUnit.balconyOrientation} {t("Direction")}
-                         </span>
-                       </div>
-                       <div>
-                         <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Price Tier")}</span>
-                         <span className="text-xs text-gold-400 font-mono font-semibold">{t("Starting Price")} {selectedUnit.startingPrice}</span>
-                       </div>
-                     </div>
- 
-                     <div>
-                       <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-2">{t("Key Floor Assets")}</span>
-                       <ul className="space-y-2 font-light">
-                         {selectedUnit.keyFeatures.map((feat, idx) => (
-                           <li key={idx} className="flex items-center gap-2 text-xs text-gray-300">
-                             <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 shrink-0" />
-                             <span>{t(feat)}</span>
-                           </li>
-                         ))}
-                       </ul>
-                     </div>
- 
-                     <div className="mt-8">
-                       <a
-                         href={`https://wa.me/60195598932?text=${encodeURIComponent(`[ORBK] Hello Yee, I would like to check availability for ${selectedUnit.name} (${selectedUnit.sizeSqFt} sqft) at Orion Residence.`)}`}
-                         target="_blank"
-                         rel="noopener noreferrer"
-                         className="w-full py-3 bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 hover:from-gold-400 hover:via-brown-300 hover:to-brown-500 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 text-center"
-                       >
-                         {t("Check Availability for This Unit")} <ArrowRight className="w-3.5 h-3.5" />
-                       </a>
+                    {/* Clean Key Specifications Grid */}
+                    <div className="grid grid-cols-2 gap-4 border-t border-b border-navy-800/80 py-5 mb-6">
+                      <div>
+                        <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Built-up Size")}</span>
+                        <span className="font-serif text-xl text-white font-bold flex items-baseline gap-1">
+                          {selectedUnit.sizeSqFt} <span className="text-xs font-sans font-light text-gray-400">{t("sq ft")}</span>
+                        </span>
+                        <span className="text-[10px] text-gray-500 block">({selectedUnit.sizeSqM} {t("sq m")})</span>
+                      </div>
+                      
+                      <div>
+                        <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Rooms Layout")}</span>
+                        <span className="font-serif text-xl text-white font-bold flex items-center gap-3 pt-0.5">
+                          <span className="flex items-center gap-1.5 text-base font-sans text-gray-200">
+                            <Bed className="w-4 h-4 text-gold-500 shrink-0" />
+                            {selectedUnit.bedrooms} {selectedUnit.bedrooms === 1 ? t("Bed") : t("Beds")}
+                          </span>
+                          <span className="flex items-center gap-1.5 text-base font-sans text-gray-200">
+                            <Bath className="w-4 h-4 text-gold-500 shrink-0" />
+                            {selectedUnit.bathrooms} {selectedUnit.bathrooms === 1 ? t("Bath") : t("Baths")}
+                          </span>
+                        </span>
+                      </div>
+
+                      <div>
+                        <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Orientation & View")}</span>
+                        <span className="text-xs text-white font-medium flex items-center gap-1.5 pt-1">
+                          <Compass className="w-4 h-4 text-gold-500 shrink-0" /> 
+                          {selectedUnit.balconyOrientation} • {t(selectedUnit.viewDirection.split(" View")[0])}
+                        </span>
+                      </div>
+
+                      <div>
+                        <span className="text-gray-500 text-[10px] font-mono uppercase tracking-wider block mb-0.5">{t("Starting From")}</span>
+                        <span className="text-base text-gold-400 font-mono font-semibold block pt-1">
+                          {selectedUnit.startingPrice}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Collapsible Technical & Finishing Specs */}
+                    <div className="mb-6">
+                      <button
+                        onClick={() => setShowAllSpecs(!showAllSpecs)}
+                        className="w-full py-3 px-4 bg-navy-850 hover:bg-navy-800 text-gray-300 rounded border border-navy-750 transition-all duration-300 flex items-center justify-between text-[11px] font-mono uppercase tracking-wider"
+                      >
+                        <span className="flex items-center gap-2 text-gold-500">
+                          <Sliders className="w-3.5 h-3.5" />
+                          {showAllSpecs ? t("Hide Finishing Specs") : t("View Material & Specs")}
+                        </span>
+                        <span className="text-xs text-gold-500/60 font-bold">{showAllSpecs ? "−" : "+"}</span>
+                      </button>
+
+                      <AnimatePresence>
+                        {showAllSpecs && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pt-4 pb-1 space-y-4 text-xs text-gray-400 leading-relaxed border-t border-navy-800/60 mt-2">
+                              <div>
+                                <p className="text-gold-500 font-mono text-[9px] uppercase tracking-wider mb-0.5">Floor Finishes</p>
+                                <p className="font-light">{selectedUnit.specs.flooring}</p>
+                              </div>
+                              <div>
+                                <p className="text-gold-500 font-mono text-[9px] uppercase tracking-wider mb-0.5">Kitchen Systems</p>
+                                <p className="font-light">{selectedUnit.specs.kitchen}</p>
+                              </div>
+                              <div>
+                                <p className="text-gold-500 font-mono text-[9px] uppercase tracking-wider mb-0.5">Bath Fittings</p>
+                                <p className="font-light">{selectedUnit.specs.fittings}</p>
+                              </div>
+                              <div>
+                                <p className="text-gold-500 font-mono text-[9px] uppercase tracking-wider mb-0.5">Ceiling Height & Lighting</p>
+                                <p className="font-light">{selectedUnit.specs.ceiling}</p>
+                              </div>
+                              <div className="bg-navy-850/60 p-2.5 rounded border border-navy-750 text-[11px]">
+                                <span className="text-[9px] text-gold-500 font-mono uppercase block mb-0.5">Acoustic Shielding</span>
+                                <p className="font-light">Multi-layer concrete wall cores offering excellent structural soundproofing (60dB rating).</p>
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Sleek WhatsApp CTA */}
+                    <div>
+                      <a
+                        href={`https://wa.me/60195598932?text=${encodeURIComponent(`[ORBK] Hello Yee, I would like to check availability and detailed pricing for the ${selectedUnit.name} (${selectedUnit.sizeSqFt} sqft) floor plan.`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-4 bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 hover:from-gold-400 hover:via-brown-300 hover:to-brown-500 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 text-center shadow-lg"
+                      >
+                        {t("Inquire Availability for This Unit")} <ArrowRight className="w-4 h-4" />
+                      </a>
                     </div>
                   </motion.div>
                 </AnimatePresence>
               </div>
 
-              {/* Selected Unit Metadata panel */}
-              <div className="bg-navy-900 rounded-lg border border-navy-700/60 p-6 flex flex-col justify-between">
-                <div className="flex justify-between items-center text-[10px] font-mono text-gray-500">
-                  <span>Selected Layout: {selectedUnitId}</span>
-                  <span>Panoramic View: {selectedUnit.viewDirection}</span>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Mobile Specs Sub-card - Stacks after Details card on mobile */}
-            <div className="lg:hidden col-span-12 mt-4">
-              <div className="bg-navy-900 rounded-lg border border-navy-700/60 p-6">
-                <h3 className="font-serif text-lg text-white mb-4 flex items-center gap-2">
-                  <Sliders className="w-4 h-4 text-gold-500" />
-                  Premium Finishings & Structural Specs
-                </h3>
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={selectedUnitId}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="grid md:grid-cols-2 gap-6 text-xs text-gray-400 leading-relaxed font-light"
-                  >
-                    <div className="space-y-4">
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Floor Finishes</p>
-                        <p>{selectedUnit.specs.flooring}</p>
-                      </div>
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Gourmet Cooking Systems</p>
-                        <p>{selectedUnit.specs.kitchen}</p>
-                      </div>
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Smart Door Security</p>
-                        <p>{selectedUnit.specs.lockset}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-4">
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Sanitary Fittings & Bathrooms</p>
-                        <p>{selectedUnit.specs.fittings}</p>
-                      </div>
-                      <div>
-                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Ceiling Details</p>
-                        <p>{selectedUnit.specs.ceiling}</p>
-                      </div>
-                      <div className="pt-2">
-                        <div className="bg-navy-800 p-3 rounded border border-navy-700/40">
-                          <span className="text-[10px] text-gold-500 font-mono uppercase tracking-wider block mb-1">Soundproofing Guarantee</span>
-                          <p className="text-[11px]">Equipped with thick custom party walls achieving a certified acoustic rating of up to 60dB sound dampening.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
             </div>
 
           </div>
         </div>
+
+        {/* ELEGANT LIGHTBOX MODAL FOR FLOOR PLAN IMAGES */}
+        <AnimatePresence>
+          {floorPlanLightboxOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl p-4"
+            >
+              {/* Close Button in Top Right */}
+              <button
+                onClick={() => setFloorPlanLightboxOpen(false)}
+                className="absolute top-6 right-6 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 hover:scale-105"
+                title="Close Lightbox"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              {/* Lightbox Center Content */}
+              <div className="relative max-w-4xl w-full flex flex-col items-center justify-center">
+                <motion.div
+                  initial={{ scale: 0.95, y: 15 }}
+                  animate={{ scale: 1, y: 0 }}
+                  exit={{ scale: 0.95, y: 15 }}
+                  transition={{ type: "spring", damping: 25, stiffness: 120 }}
+                  className="bg-[#0b0c10] border border-gray-800 p-4 rounded-xl shadow-2xl flex items-center justify-center max-h-[80vh] w-full max-w-[650px] overflow-hidden"
+                >
+                  <img
+                    src={floorPlanImages[selectedUnitId] || floorPlanImages["Type-A1"]}
+                    alt={`${selectedUnit.name} Layout Diagram`}
+                    className="max-h-[75vh] max-w-full object-contain p-2"
+                  />
+                </motion.div>
+
+                {/* Info Text below image */}
+                <div className="mt-6 text-center text-white max-w-lg">
+                  <h4 className="font-serif text-xl font-semibold text-gold-400">{t(selectedUnit.name)}</h4>
+                  <p className="text-xs text-gray-400 mt-1 uppercase font-mono tracking-wider">{selectedUnit.sizeSqFt} SQ FT ({selectedUnit.sizeSqM} SQ M) • {selectedUnit.bedrooms} Bed / {selectedUnit.bathrooms} Bath</p>
+                  <p className="text-[11px] text-gray-500 mt-3 font-light leading-relaxed">
+                    Use this schematic to plan furniture placements and interior decorations. Handover units feature premium luxury architectural finishings as listed.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
 
       {/* AMENITIES SECTION */}
