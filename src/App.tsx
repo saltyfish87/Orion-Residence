@@ -1014,7 +1014,7 @@ export default function App() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
           >
-            <Menu className="w-6 h-6" />
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -1087,7 +1087,7 @@ export default function App() {
             <span className="h-[1px] w-8 bg-gold-500/50" />
           </div>
 
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
+          <h1 className="font-serif text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
             ORION <br />
             <span className="italic font-normal font-serif text-gold-brown-gradient bg-clip-text">RESIDENCE</span>
           </h1>
@@ -1172,7 +1172,7 @@ export default function App() {
             <div className="lg:col-span-7 grid grid-cols-12 gap-4 relative">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.04)_0%,transparent_70%)] pointer-events-none" />
               
-              <ScrollReveal direction="left" delay={150} className="col-span-8 rounded overflow-hidden border border-gold-500/20 shadow-2xl relative group">
+              <ScrollReveal direction="left" delay={150} className="col-span-12 sm:col-span-8 rounded overflow-hidden border border-gold-500/20 shadow-2xl relative group">
                 <img
                   src={interiorImg}
                   alt="Orion Living Room"
@@ -1186,7 +1186,7 @@ export default function App() {
                 </div>
               </ScrollReveal>
 
-              <ScrollReveal direction="up" delay={300} className="col-span-7 col-start-6 -mt-24 rounded overflow-hidden border border-gold-500/20 shadow-2xl relative group z-10">
+              <ScrollReveal direction="up" delay={300} className="col-span-12 sm:col-span-7 sm:col-start-6 sm:-mt-24 mt-4 rounded overflow-hidden border border-gold-500/20 shadow-2xl relative group z-10">
                 <img
                   src={skypoolImg}
                   alt="Orion Sky Pool"
@@ -1221,7 +1221,7 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <ScrollReveal direction="up" delay={0} className="bg-navy-800 p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
+            <ScrollReveal direction="up" delay={0} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
                 <Maximize2 className="w-5 h-5 text-black" />
               </div>
@@ -1232,7 +1232,7 @@ export default function App() {
             </ScrollReveal>
 
             {/* Feature 2 */}
-            <ScrollReveal direction="up" delay={100} className="bg-navy-800 p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
+            <ScrollReveal direction="up" delay={100} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
                 <Shield className="w-5 h-5 text-black" />
               </div>
@@ -1243,7 +1243,7 @@ export default function App() {
             </ScrollReveal>
 
             {/* Feature 3 */}
-            <ScrollReveal direction="up" delay={200} className="bg-navy-800 p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
+            <ScrollReveal direction="up" delay={200} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
                 <Lock className="w-5 h-5 text-black" />
               </div>
@@ -1254,7 +1254,7 @@ export default function App() {
             </ScrollReveal>
 
             {/* Feature 4 */}
-            <ScrollReveal direction="up" delay={150} className="bg-navy-800 p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
+            <ScrollReveal direction="up" delay={150} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
                 <Sliders className="w-5 h-5 text-black" />
               </div>
@@ -1265,7 +1265,7 @@ export default function App() {
             </ScrollReveal>
 
             {/* Feature 5 */}
-            <ScrollReveal direction="up" delay={250} className="bg-navy-800 p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
+            <ScrollReveal direction="up" delay={250} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
                 <Sparkles className="w-5 h-5 text-black" />
               </div>
@@ -1276,7 +1276,7 @@ export default function App() {
             </ScrollReveal>
 
             {/* Feature 6 */}
-            <ScrollReveal direction="up" delay={350} className="bg-navy-800 p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
+            <ScrollReveal direction="up" delay={350} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
                 <Compass className="w-5 h-5 text-black" />
               </div>
@@ -1308,7 +1308,7 @@ export default function App() {
             <div className="relative rounded-lg border border-gold-500/20 overflow-hidden shadow-2xl bg-navy-900 group gold-glow">
               
               {/* Virtual Tour IFrame */}
-              <div className="relative w-full aspect-[16/10] md:h-[550px] h-[350px]">
+              <div className="relative w-full aspect-[16/10] md:h-[550px] h-[260px] xs:h-[320px] sm:h-[380px]">
                 <iframe
                   src="https://goprop360.com/360vr/orion/sales-gallery/"
                   title="Orion Residence 360° Virtual Tour"
@@ -1344,7 +1344,7 @@ export default function App() {
               <button
                 key={tab.id}
                 onClick={() => setActiveGalleryTab(tab.id as any)}
-                className={`px-5 py-2 text-[10px] font-mono uppercase tracking-widest border transition-all duration-300 rounded ${
+                className={`px-3 sm:px-5 py-1.5 sm:py-2 text-[9px] sm:text-[10px] font-mono uppercase tracking-widest border transition-all duration-300 rounded ${
                   activeGalleryTab === tab.id
                     ? "bg-gold-500 text-black border-gold-500 font-bold shadow-[0_0_15px_rgba(212,175,55,0.2)]"
                     : "border-navy-700/60 bg-navy-800 text-gray-400 hover:text-white hover:border-gold-500/30"
@@ -1422,27 +1422,27 @@ export default function App() {
             </div>
 
             {/* Main Stage with Arrows */}
-            <div className="flex-1 flex items-center justify-between max-w-7xl mx-auto w-full gap-4 py-8">
+            <div className="flex-1 flex items-center justify-center max-w-7xl mx-auto w-full gap-4 py-8 relative">
               <button
                 onClick={() => setLightboxIndex((lightboxIndex - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length)}
-                className="w-12 h-12 rounded-full border border-navy-750 bg-navy-900/40 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500 hover:bg-navy-950 transition-all duration-300 shrink-0"
+                className="absolute left-2 md:static w-10 h-10 md:w-12 md:h-12 rounded-full border border-navy-750 bg-navy-900/80 md:bg-navy-900/40 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500 hover:bg-navy-950 transition-all duration-300 shrink-0 z-10"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
               </button>
 
-              <div className="relative max-h-[65vh] max-w-[85vw] flex items-center justify-center overflow-hidden rounded border border-navy-800 shadow-2xl bg-black">
+              <div className="relative max-h-[60vh] max-w-[90vw] md:max-w-[70vw] flex items-center justify-center overflow-hidden rounded border border-navy-800 shadow-2xl bg-black">
                 <img
                   src={GALLERY_ITEMS[lightboxIndex].image}
                   alt={GALLERY_ITEMS[lightboxIndex].title}
-                  className="max-h-[65vh] object-contain transition-all duration-500"
+                  className="max-h-[60vh] object-contain transition-all duration-500"
                 />
               </div>
 
               <button
                 onClick={() => setLightboxIndex((lightboxIndex + 1) % GALLERY_ITEMS.length)}
-                className="w-12 h-12 rounded-full border border-navy-750 bg-navy-900/40 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500 hover:bg-navy-950 transition-all duration-300 shrink-0"
+                className="absolute right-2 md:static w-10 h-10 md:w-12 md:h-12 rounded-full border border-navy-750 bg-navy-900/80 md:bg-navy-900/40 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500 hover:bg-navy-950 transition-all duration-300 shrink-0 z-10"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
               </button>
             </div>
 
@@ -1530,8 +1530,8 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Specs Sub-card */}
-              <div className="mt-8 bg-navy-900 rounded-lg border border-navy-700/60 p-6">
+              {/* Specs Sub-card (Desktop-only, hidden on mobile) */}
+              <div className="hidden lg:block mt-8 bg-navy-900 rounded-lg border border-navy-700/60 p-6">
                 <h3 className="font-serif text-lg text-white mb-4 flex items-center gap-2">
                   <Sliders className="w-4 h-4 text-gold-500" />
                   Premium Finishings & Structural Specs
@@ -1659,6 +1659,57 @@ export default function App() {
                 </div>
               </div>
 
+            </div>
+
+            {/* Mobile Specs Sub-card - Stacks after Details card on mobile */}
+            <div className="lg:hidden col-span-12 mt-4">
+              <div className="bg-navy-900 rounded-lg border border-navy-700/60 p-6">
+                <h3 className="font-serif text-lg text-white mb-4 flex items-center gap-2">
+                  <Sliders className="w-4 h-4 text-gold-500" />
+                  Premium Finishings & Structural Specs
+                </h3>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={selectedUnitId}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="grid md:grid-cols-2 gap-6 text-xs text-gray-400 leading-relaxed font-light"
+                  >
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Floor Finishes</p>
+                        <p>{selectedUnit.specs.flooring}</p>
+                      </div>
+                      <div>
+                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Gourmet Cooking Systems</p>
+                        <p>{selectedUnit.specs.kitchen}</p>
+                      </div>
+                      <div>
+                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Smart Door Security</p>
+                        <p>{selectedUnit.specs.lockset}</p>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div>
+                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Sanitary Fittings & Bathrooms</p>
+                        <p>{selectedUnit.specs.fittings}</p>
+                      </div>
+                      <div>
+                        <p className="text-gold-500 font-mono text-[10px] uppercase tracking-wider mb-1">Ceiling Details</p>
+                        <p>{selectedUnit.specs.ceiling}</p>
+                      </div>
+                      <div className="pt-2">
+                        <div className="bg-navy-800 p-3 rounded border border-navy-700/40">
+                          <span className="text-[10px] text-gold-500 font-mono uppercase tracking-wider block mb-1">Soundproofing Guarantee</span>
+                          <p className="text-[11px]">Equipped with thick custom party walls achieving a certified acoustic rating of up to 60dB sound dampening.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
 
           </div>
@@ -1823,30 +1874,30 @@ export default function App() {
                         Luxury Retail & Haute Couture
                       </span>
                       <div className="space-y-3">
-                        <div className="flex justify-between items-start text-xs">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs">
                           <div>
                             <span className="text-white font-medium block">Pavilion Kuala Lumpur</span>
                             <span className="text-gray-500 text-[11px] font-light">Malaysia's premier shopping luxury destination.</span>
                           </div>
-                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded">
+                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded self-start sm:self-center">
                             150m (1-min walk)
                           </span>
                         </div>
-                        <div className="flex justify-between items-start text-xs pt-1">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs pt-1">
                           <div>
                             <span className="text-white font-medium block">The Starhill</span>
                             <span className="text-gray-500 text-[11px] font-light">Watch salons, modern fashion and Michelin stars.</span>
                           </div>
-                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded">
+                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded self-start sm:self-center">
                             50m (30-sec walk)
                           </span>
                         </div>
-                        <div className="flex justify-between items-start text-xs pt-1">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs pt-1">
                           <div>
                             <span className="text-white font-medium block">Fahrenheit88 Mall</span>
                             <span className="text-gray-500 text-[11px] font-light">Vibrant cosmetics, retail and lifestyle hub.</span>
                           </div>
-                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded">
+                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded self-start sm:self-center">
                             80m (1-min walk)
                           </span>
                         </div>
@@ -1859,21 +1910,21 @@ export default function App() {
                         Global Connections & Transit
                       </span>
                       <div className="space-y-3">
-                        <div className="flex justify-between items-start text-xs">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs">
                           <div>
                             <span className="text-white font-medium block">MRT Bukit Bintang Station</span>
                             <span className="text-gray-500 text-[11px] font-light">Direct connection to TRX, KL Sentral, and Klang Valley.</span>
                           </div>
-                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded">
+                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded self-start sm:self-center">
                             200m (2-min walk)
                           </span>
                         </div>
-                        <div className="flex justify-between items-start text-xs pt-1">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs pt-1">
                           <div>
                             <span className="text-white font-medium block">Tun Razak Exchange (TRX)</span>
                             <span className="text-gray-500 text-[11px] font-light">Malaysia's leading international financial center.</span>
                           </div>
-                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded">
+                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded self-start sm:self-center">
                             1 MRT Stop
                           </span>
                         </div>
@@ -1886,12 +1937,12 @@ export default function App() {
                         Culinary & Heritage
                       </span>
                       <div className="space-y-3">
-                        <div className="flex justify-between items-start text-xs">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs">
                           <div>
                             <span className="text-white font-medium block">Lot 10 Hutong Heritage</span>
                             <span className="text-gray-500 text-[11px] font-light">Legendary culinary landmark housing local heritage icons.</span>
                           </div>
-                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded">
+                          <span className="text-gold-400 font-mono text-[10px] whitespace-nowrap bg-gold-950/40 border border-gold-900/40 px-1.5 py-0.5 rounded self-start sm:self-center">
                             250m (3-min walk)
                           </span>
                         </div>
@@ -1922,7 +1973,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="bg-navy-850/90 backdrop-blur-md rounded-lg border border-gold-500/25 p-8 md:p-12 shadow-2xl">
+          <div className="bg-navy-850/90 backdrop-blur-md rounded-lg border border-gold-500/25 p-5 sm:p-8 md:p-12 shadow-2xl">
             {!formSubmitted ? (
               <form onSubmit={handleFormSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
