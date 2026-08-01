@@ -7,16 +7,16 @@
   --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   
-  --color-gold-50: #fefdf6;
-  --color-gold-100: #faf6e8;
-  --color-gold-200: #f5edcf;
-  --color-gold-300: #ebd89b;
-  --color-gold-400: #e0bf67;
-  --color-gold-500: #d4af37;
-  --color-gold-600: #b89326;
-  --color-gold-700: #8f701c;
-  --color-gold-800: #664f15;
-  --color-gold-900: #3d2f0d;
+  --color-gold-50: #fefce8;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #d4af37; /* Rich Gold Yellow */
+  --color-gold-600: #b89018;
+  --color-gold-700: #92700e;
+  --color-gold-800: #785a0c;
+  --color-gold-900: #453307;
 
   /* Luxury Dark Blue Theme Palette */
   --color-navy-950: #030611; /* Deepest luxurious midnight navy */
@@ -49,53 +49,42 @@ html {
   scrollbar-width: none;
 }
 
-/* Premium gradient animations */
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
+/* Solid Shimmer - Gold Yellow */
 .shimmer-bg {
-  background: linear-gradient(90deg, #060b1e 25%, #10193b 50%, #060b1e 75%);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite linear;
+  background: #d4af37;
 }
 
-/* Soft gold ambient glow */
+/* Solid gold yellow ambient glow */
 .gold-glow {
-  box-shadow: 0 0 40px -5px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 20px -2px rgba(212, 175, 55, 0.3);
 }
 
 .gold-border-glow:hover {
-  box-shadow: 0 0 25px -3px rgba(212, 175, 55, 0.25);
-  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 20px 0px rgba(212, 175, 55, 0.45);
+  border-color: #d4af37;
 }
 
-/* Luxury visual effects */
+/* Solid Gold Yellow Effects - Strictly NO Gradients */
 .bg-gold-brown-radial {
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(110, 71, 38, 0.04) 60%, transparent 100%);
+  background: #060b1e;
 }
 
 .bg-gold-brown-gradient {
-  background: linear-gradient(135deg, #d4af37 0%, #a38052 50%, #6e4726 100%);
+  background: #d4af37;
 }
 
 .text-gold-brown-gradient {
-  background: linear-gradient(135deg, #f5d77f 0%, #d4af37 45%, #a38052 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #d4af37;
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 
 .border-gold-brown-glow {
-  border: 1px solid rgba(212, 175, 55, 0.18);
-  box-shadow: 0 0 20px rgba(110, 71, 38, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
 .border-gold-brown-glow:hover {
-  border-color: rgba(212, 175, 55, 0.4);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+  border-color: #d4af37;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
 }

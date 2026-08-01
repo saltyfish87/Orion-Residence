@@ -965,7 +965,7 @@ export default function App() {
           <a href="#" className="flex items-center gap-2 group">
             <div className="relative w-9 h-9 flex items-center justify-center rounded-full border border-gold-500/50 bg-navy-950/50 overflow-hidden">
               <span className="text-gold-500 font-serif text-lg font-bold">O</span>
-              <div className="absolute inset-0 bg-gradient-to-tr from-gold-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gold-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             <div className="flex flex-col">
               <span className="text-white font-serif tracking-widest text-lg font-bold uppercase">Orion</span>
@@ -993,7 +993,7 @@ export default function App() {
                   onClick={() => setLang(l)}
                   className={`px-2 py-1 rounded transition-all duration-300 uppercase ${
                     lang === l
-                      ? "bg-gold-500 text-black font-bold shadow-[0_0_8px_rgba(212,175,55,0.25)]"
+                      ? "bg-gold-500 text-black font-bold shadow-[0_0_8px_rgba(234,179,8,0.3)]"
                       : "text-gray-400 hover:text-gold-400"
                   }`}
                 >
@@ -1006,7 +1006,7 @@ export default function App() {
               href="https://wa.me/60195598932?text=%5BORBK%5D%20Hello%20Yee%2C%20I%20am%20interested%20in%20requesting%20the%20Private%20Portfolio%20for%20Orion%20Residence."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 hover:from-gold-400 hover:via-brown-300 hover:to-brown-500 text-black text-[10px] font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] block text-center"
+              className="px-5 py-2.5 bg-gold-500 hover:bg-gold-400 text-black text-[10px] font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] block text-center"
             >
               {t("Private Portfolio")}
             </a>
@@ -1055,7 +1055,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-3 bg-gradient-to-r from-gold-500 to-brown-600 text-black font-semibold rounded uppercase tracking-wider block"
+              className="w-full text-center py-3 bg-gold-500 hover:bg-gold-400 text-black font-semibold rounded uppercase tracking-wider block"
             >
               {t("Private Portfolio")}
             </a>
@@ -1075,9 +1075,8 @@ export default function App() {
             backgroundPosition: "center 30%"
           }}
         >
-          {/* Elegant gradients overlay in rich deep blue */}
-          <div className="absolute inset-0 bg-gradient-to-b from-navy-950/40 via-navy-900/60 to-navy-900" />
-          <div className="absolute inset-0 bg-radial-gradient(ellipse_at_center,transparent_30%,rgba(6,11,30,0.85)_100%)" />
+          {/* Solid dark overlay in rich deep blue - NO GRADIENT */}
+          <div className="absolute inset-0 bg-navy-950/70" />
         </div>
 
         <div className="relative z-20 max-w-5xl mx-auto px-6 text-center flex flex-col items-center my-auto">
@@ -1091,7 +1090,7 @@ export default function App() {
 
           <h1 className="font-serif text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-6 leading-[1.1]">
             ORION <br />
-            <span className="italic font-normal font-serif text-gold-brown-gradient bg-clip-text">RESIDENCE</span>
+            <span className="italic font-normal font-serif text-gold-500">RESIDENCE</span>
           </h1>
 
           <p className="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto font-light tracking-wide leading-relaxed mb-10">
@@ -1104,7 +1103,7 @@ export default function App() {
                 const element = document.getElementById("layouts");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-8 py-3.5 bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 hover:from-gold-400 hover:via-brown-300 hover:to-brown-500 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.45)] flex items-center gap-2"
+              className="px-8 py-3.5 bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.45)] flex items-center gap-2"
             >
               {t("Explore Floor Plans")} <Maximize2 className="w-3.5 h-3.5" />
             </button>
@@ -1121,7 +1120,7 @@ export default function App() {
         </div>
 
         {/* Floating Quick Stats Ribbon */}
-        <div className="relative md:absolute md:bottom-0 left-0 w-full z-30 bg-gradient-to-t from-navy-900 to-transparent pt-8 md:pt-12 pb-4 md:pb-8 mt-12 md:mt-0">
+        <div className="relative md:absolute md:bottom-0 left-0 w-full z-30 bg-navy-900/90 pt-8 md:pt-12 pb-4 md:pb-8 mt-12 md:mt-0">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
@@ -1172,7 +1171,7 @@ export default function App() {
 
             {/* Visual presentation - Staggered image cards */}
             <div className="lg:col-span-7 grid grid-cols-12 gap-4 relative">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.04)_0%,transparent_70%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-transparent pointer-events-none" />
               
               <ScrollReveal direction="left" delay={150} className="col-span-12 sm:col-span-8 rounded overflow-hidden border border-gold-500/20 shadow-2xl relative group">
                 <img
@@ -1180,7 +1179,7 @@ export default function App() {
                   alt="Orion Living Room"
                   className="w-full object-cover aspect-[4/3] group-hover:scale-102 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                <div className="absolute inset-0 bg-black/75 flex items-end p-6">
                   <div>
                     <span className="text-gold-500 font-mono text-[9px] uppercase tracking-widest block mb-1">{t("Show Unit Interior")}</span>
                     <h4 className="font-serif text-base text-white">{t("Classic Elegance & Modern Framing")}</h4>
@@ -1194,7 +1193,7 @@ export default function App() {
                   alt="Orion Sky Pool"
                   className="w-full object-cover aspect-[4/3] group-hover:scale-102 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                <div className="absolute inset-0 bg-black/75 flex items-end p-6">
                   <div>
                     <span className="text-gold-500 font-mono text-[9px] uppercase tracking-widest block mb-1">{t("Level 40 Oasis")}</span>
                     <h4 className="font-serif text-base text-white">{t("Infinity Sky Pool Over Sunset KL")}</h4>
@@ -1209,7 +1208,7 @@ export default function App() {
 
       {/* KEY FEATURES SECTION */}
       <section id="features" className="py-24 relative bg-navy-850 border-t border-b border-navy-800">
-        <div className="absolute inset-0 bg-gold-brown-radial pointer-events-none" />
+        <div className="absolute inset-0 bg-navy-850 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <ScrollReveal direction="up" className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-gold-500 font-mono text-xs uppercase tracking-[0.3em] mb-3 block">{t("Bespoke Living")}</span>
@@ -1224,7 +1223,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <ScrollReveal direction="up" delay={0} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center mb-6">
                 <Maximize2 className="w-5 h-5 text-black" />
               </div>
               <h3 className="font-serif text-xl text-white mb-3">{t("Sovereign Ceiling Height")}</h3>
@@ -1235,7 +1234,7 @@ export default function App() {
 
             {/* Feature 2 */}
             <ScrollReveal direction="up" delay={100} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center mb-6">
                 <Shield className="w-5 h-5 text-black" />
               </div>
               <h3 className="font-serif text-xl text-white mb-3">{t("Acoustic Sanctuary Walls")}</h3>
@@ -1246,7 +1245,7 @@ export default function App() {
 
             {/* Feature 3 */}
             <ScrollReveal direction="up" delay={200} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center mb-6">
                 <Lock className="w-5 h-5 text-black" />
               </div>
               <h3 className="font-serif text-xl text-white mb-3">{t("Smart Biometric Entry")}</h3>
@@ -1257,7 +1256,7 @@ export default function App() {
 
             {/* Feature 4 */}
             <ScrollReveal direction="up" delay={150} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center mb-6">
                 <Sliders className="w-5 h-5 text-black" />
               </div>
               <h3 className="font-serif text-xl text-white mb-3">{t("Precision Climate Control")}</h3>
@@ -1268,7 +1267,7 @@ export default function App() {
 
             {/* Feature 5 */}
             <ScrollReveal direction="up" delay={250} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-gold-500 flex items-center justify-center mb-6">
                 <Sparkles className="w-5 h-5 text-black" />
               </div>
               <h3 className="font-serif text-xl text-white mb-3">{t("Greek Volakas Marble")}</h3>
@@ -1279,7 +1278,7 @@ export default function App() {
 
             {/* Feature 6 */}
             <ScrollReveal direction="up" delay={350} className="bg-navy-800 p-6 sm:p-8 rounded-lg border-gold-brown-glow transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-brown-600 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center mb-6">
                 <Compass className="w-5 h-5 text-black" />
               </div>
               <h3 className="font-serif text-xl text-white mb-3">{t("Panoramic Corner Orientations")}</h3>
@@ -1479,9 +1478,6 @@ export default function App() {
 
           {/* Premium Responsive Selector Segment Row */}
           <div className="relative w-full mb-10 overflow-hidden">
-            {/* Soft Ambient Fade Masks for Mobile Scrolling Indication */}
-            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-navy-850 to-transparent pointer-events-none z-10 md:hidden" />
-            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-navy-850 to-transparent pointer-events-none z-10 md:hidden" />
             
             <div className="flex overflow-x-auto no-scrollbar gap-3 pb-2 px-6 -mx-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 lg:grid-cols-6 snap-x">
               {UNIT_TYPES.map((unit) => (
@@ -1492,7 +1488,7 @@ export default function App() {
                   }}
                   className={`snap-center px-4 py-3.5 rounded text-[11px] sm:text-xs uppercase font-mono tracking-wider transition-all duration-300 whitespace-nowrap md:whitespace-normal text-center shrink-0 border flex flex-col items-center justify-center gap-1.5 min-w-[150px] md:min-w-0 ${
                     selectedUnitId === unit.id
-                      ? "bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 text-black font-bold border-gold-500 shadow-[0_0_15px_rgba(212,175,55,0.25)]"
+                      ? "bg-gold-500 text-black font-bold border-gold-500 shadow-[0_0_15px_rgba(212,175,55,0.3)]"
                       : "bg-navy-800 text-gray-400 border-navy-700/60 hover:border-gold-500/30 hover:text-white"
                   }`}
                 >
@@ -1512,7 +1508,7 @@ export default function App() {
                 className="group relative bg-[#090a0f] rounded-lg border border-gray-800/80 p-6 shadow-2xl overflow-hidden gold-glow flex flex-col justify-between cursor-zoom-in transition-all duration-500 hover:border-gold-500/40"
               >
                 {/* Architectural Blueprint Style Accents */}
-                <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]" />
+                <div className="absolute inset-0 opacity-5 pointer-events-none bg-transparent" />
                 
                 <div className="flex justify-between items-center z-10 mb-4 border-b border-navy-800/60 pb-3">
                   <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">
@@ -1541,7 +1537,7 @@ export default function App() {
                     />
                   </AnimatePresence>
 
-                  {/* Elegant Glassmorphic Zoom Overlay on Hover */}
+                  {/* Glassmorphic Zoom Overlay on Hover */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-3 rounded backdrop-blur-[2px]">
                     <div className="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-400 flex items-center justify-center text-gold-400 shadow-lg">
                       <Maximize2 className="w-5 h-5" />
@@ -1563,11 +1559,11 @@ export default function App() {
               </p>
             </div>
 
-            {/* Layout Detail Side Info - HIGHLY SIMPLIFIED & CLUTTER-FREE */}
+            {/* Layout Detail Side Info */}
             <div className="lg:col-span-5 space-y-6">
               
               <div className="bg-navy-900 rounded-lg border border-gold-500/25 p-6 md:p-8 shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-gold-500 to-brown-600" />
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-gold-500" />
                 
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -1643,7 +1639,7 @@ export default function App() {
                           <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
+                            exit={{ height: "auto", opacity: 0 }}
                             transition={{ duration: 0.3 }}
                             className="overflow-hidden"
                           >
@@ -1680,7 +1676,7 @@ export default function App() {
                         href={`https://wa.me/60195598932?text=${encodeURIComponent(`[ORBK] Hello Yee, I would like to check availability and detailed pricing for the ${selectedUnit.name} (${selectedUnit.sizeSqFt} sqft) floor plan.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-4 bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 hover:from-gold-400 hover:via-brown-300 hover:to-brown-500 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 text-center shadow-lg"
+                        className="w-full py-4 bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 text-center shadow-lg"
                       >
                         {t("Inquire Availability for This Unit")} <ArrowRight className="w-4 h-4" />
                       </a>
@@ -1865,7 +1861,7 @@ export default function App() {
                     alt="Orion Bukit Bintang Location Map"
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-900/20 to-transparent flex items-end p-4">
+                  <div className="absolute inset-0 bg-navy-950/80 flex items-end p-4">
                     <span className="text-[10px] text-gold-300 font-mono uppercase tracking-widest font-semibold">
                       ★ Orion Residence Site Map
                     </span>
@@ -2160,7 +2156,7 @@ export default function App() {
                   <button
                     type="submit"
                     disabled={formSubmitting || !consentAccepted}
-                    className="w-full py-4 bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 hover:from-gold-400 hover:via-brown-300 hover:to-brown-500 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none"
+                    className="w-full py-4 bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none"
                   >
                     {formSubmitting ? (
                       <>
@@ -2201,7 +2197,7 @@ export default function App() {
                     href={`https://wa.me/60195598932?text=%5BORBK%5D%20Hello%20Yee%2C%20I%20have%20submitted%20the%20VIP%20Inquiry%20form%20for%20Orion%20Residence%20(Ref%20Code%3A%20${submittedId}).%20Please%20share%20the%20Private%20Portfolio%20details.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-8 py-3.5 bg-gradient-to-r from-gold-500 via-brown-400 to-brown-600 hover:from-gold-400 hover:via-brown-300 hover:to-brown-500 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2"
+                    className="px-8 py-3.5 bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2"
                   >
                     <Phone className="w-3.5 h-3.5" /> {t("Chat on WhatsApp")}
                   </a>
