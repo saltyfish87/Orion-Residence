@@ -24,4 +24,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap Location
-Sitemap: https://orionresidence.my/sitemap.xml
+Sitemap: https://www.orionresidence.my/sitemap.xml

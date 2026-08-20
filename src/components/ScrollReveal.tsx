@@ -8,6 +8,7 @@ interface ScrollRevealProps {
   duration?: number; // ms
   direction?: "up" | "down" | "left" | "right" | "none";
   distance?: string;
+  id?: string;
 }
 
 export function ScrollReveal({
