@@ -889,15 +889,15 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "繁体": "及",
     "JPN": "および"
   },
-  "and consent to Yee (REN46306) contacting me regarding Orion Residence.": {
-    "简体": "并同意授权 Yee (REN46306) 就 Orion Residence 项目后续详情联系我。",
-    "繁体": "並同意授權 Yee (REN46306) 就 Orion Residence 項目後續詳情聯絡我。",
-    "JPN": "に同意し、Yee (REN46306) が Orion Residence に関して連絡することに同意します。"
+  "and consent to Yee (REN46305) contacting me regarding Orion Residence.": {
+    "简体": "并同意授权 Yee (REN46305) 就 Orion Residence 项目后续详情联系我。",
+    "繁体": "並同意授權 Yee (REN46305) 就 Orion Residence 項目後續詳情聯絡我。",
+    "JPN": "に同意し、Yee (REN46305) が Orion Residence に関して連絡することに同意します。"
   },
-  "This is an independent marketing website managed by Yee (REN46306) under IQI Realty Sdn Bhd. It is not the official developer website of Orion Tower Sdn. Bhd.": {
-    "简体": "本网站是由 Yee (REN46306, 隶属 IQI Realty Sdn Bhd 房产服务公司) 独立运营的第三方推广宣传网站，并非 Orion Tower Sdn. Bhd. 官方开发商网站。",
-    "繁体": "本網站是由 Yee (REN46306, 隸屬 IQI Realty Sdn Bhd 房產服務公司) 獨立運營的第三方推廣宣傳網站，並非 Orion Tower Sdn. Bhd. 官方開發商網站。",
-    "JPN": "本ウェブサイトは、IQI Realty Sdn Bhd所属のYee (REN46306)が管理・運営する独立したマーケティング代理店サイトであり、Orion Tower Sdn. Bhd.の公式デベロッパーサイトではありません。"
+  "This is an independent marketing website managed by Yee (REN46305) under IQI Realty Sdn Bhd. It is not the official developer website of Orion Tower Sdn. Bhd.": {
+    "简体": "本网站是由 Yee (REN46305, 隶属 IQI Realty Sdn Bhd 房产服务公司) 独立运营的第三方推广宣传网站，并非 Orion Tower Sdn. Bhd. 官方开发商网站。",
+    "繁体": "本網站是由 Yee (REN46305, 隸屬 IQI Realty Sdn Bhd 房產服務公司) 獨立運營的第三方推廣宣傳網站，並非 Orion Tower Sdn. Bhd. 官方開發商網站。",
+    "JPN": "本ウェブサイトは、IQI Realty Sdn Bhd所属のYee (REN46305)が管理・運営する独立したマーケティング代理店サイトであり、Orion Tower Sdn. Bhd.の公式デベロッパーサイトではありません。"
   },
   "All illustrative renderings, conceptual drawings, room dimensions, specifications, and layout designs on this website are approximate and intended as a general guide only. The developer reserves the right to modify any aspect at their absolute discretion.": {
     "简体": "本网站中包含的所有艺术渲染图、概念设计图、房间尺寸、建筑材料、配置要求及户型规划均为约数，仅供参考之用。开发商保留根据实际需要进行调整与修改的最终决定权。",
@@ -924,10 +924,10 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "繁体": "2. 信息的使用方式",
     "JPN": "2. 情報の使用目的"
   },
-  "Your details are utilized strictly to respond to your registered request, share the digital access portfolio containing price indexes, and arrange scheduled private viewings. Your information is managed directly by Yee (REN46306) under IQI Realty Sdn Bhd.": {
-    "简体": "您的信息仅用于回复您的咨询请求、向您发送包含价格指数的数字化专属资产包，以及安排私属看房日程。您的数据将由 IQI Realty 旗下的注册经纪人 Yee (REN46306) 妥善管理。",
-    "繁体": "您的資訊僅用於回覆您的諮詢請求、向您發送包含價格指數的數位化專屬資產包，以及安排私屬看房日程。您的數據將由 IQI Realty 旗下的註冊經紀人 Yee (REN46306) 妥善管理。",
-    "JPN": "ご登録いただいた情報は、お問い合わせへの回答、価格指標を含むデジタルポートフォリオの送付、および内覧スケジュールの調整のためにのみ使用されます。お客様の情報は、IQI Realty Sdn Bhd所属のYee (REN46306)が直接管理します。"
+  "Your details are utilized strictly to respond to your registered request, share the digital access portfolio containing price indexes, and arrange scheduled private viewings. Your information is managed directly by Yee (REN46305) under IQI Realty Sdn Bhd.": {
+    "简体": "您的信息仅用于回复您的咨询请求、向您发送包含价格指数的数字化专属资产包，以及安排私属看房日程。您的数据将由 IQI Realty 旗下的注册经纪人 Yee (REN46305) 妥善管理。",
+    "繁体": "您的資訊僅用於回覆您的諮詢請求、向您發送包含價格指數的數位化專屬資產包，以及安排私屬看房日程。您的數據將由 IQI Realty 旗下的註冊經紀人 Yee (REN46305) 妥善管理。",
+    "JPN": "ご登録いただいた情報は、お問い合わせへの回答、価格指標を含むデジタルポートフォリオの送付、および内覧スケジュールの調整のためにのみ使用されます。お客様の情報は、IQI Realty Sdn Bhd所属のYee (REN46305)が直接管理します。"
   },
   "3. Cookies & Advertising Protection": {
     "简体": "3. Cookie 与广告隐私保护",
@@ -969,10 +969,10 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "繁体": "1. 渠道性質聲明",
     "JPN": "1. サイトの性格について"
   },
-  "This platform acts as an independent marketing channel managed by Shyan Yee (REN46306) under IQI Realty Sdn Bhd. It is built as a portfolio presentation to introduce Orion Residence and is not the official developer website.": {
-    "简体": "本展示平台是由隶属 IQI Realty Sdn Bhd 的注册置业顾问 Yee (REN46306) 独立运营维护。本站属于向潜在投资者介绍 Orion Residence 的艺术级在线画册，而非开发商的直接或官方网站。",
-    "繁体": "本展示平台是由隸屬 IQI Realty Sdn Bhd 的註冊置業顧問 Yee (REN46306) 獨立運營維護。本站屬於向潛在投資者介紹 Orion Residence 的藝術級線上畫冊，而非開發商的直接或官方網站。",
-    "JPN": "本プラットフォームは、IQI Realty Sdn Bhd所属のYee (REN46306)が運営する独立したマーケティングチャネルです。Orion Residenceを市場に紹介するための紹介ポートフォリオとして構築されており、公式デベロッパーのウェブサイトではありません。"
+  "This platform acts as an independent marketing channel managed by Shyan Yee (REN46305) under IQI Realty Sdn Bhd. It is built as a portfolio presentation to introduce Orion Residence and is not the official developer website.": {
+    "简体": "本展示平台是由隶属 IQI Realty Sdn Bhd 的注册置业顾问 Yee (REN46305) 独立运营维护。本站属于向潜在投资者介绍 Orion Residence 的艺术级在线画册，而非开发商的直接或官方网站。",
+    "繁体": "本展示平台是由隸屬 IQI Realty Sdn Bhd 的註冊置業顧問 Yee (REN46305) 獨立運營維護。本站屬於向潛在投資者介紹 Orion Residence 的藝術級線上畫冊，而非開發商的直接或官方網站。",
+    "JPN": "本プラットフォームは、IQI Realty Sdn Bhd所属のYee (REN46305)が運営する独立したマーケティングチャネルです。Orion Residenceを市場に紹介するための紹介ポートフォリオとして構築されており、公式デベロッパーのウェブサイトではありません。"
   },
   "2. Information Disclaimer": {
     "简体": "2. 规划信息免责",
@@ -1024,10 +1024,10 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "繁体": "專業地產代理顧問身份資訊",
     "JPN": "資格登録エージェント詳細"
   },
-  "This digital representation is managed by Yee (Shyan Yee, REN46306), a registered Real Estate Negotiator authorized under IQI Realty Sdn Bhd (Company License: E(1)1584). IQI Realty is an appointed agency for marketing real estate developments.": {
-    "简体": "本宣传网页由注册地产谈判代表 Yee (Shyan Yee, REN46306) 管理维护，其所属中介服务机构为大马著名房产经纪公司 IQI Realty Sdn Bhd (执照注册号: E(1)1584)。IQI Realty 是受委托推广该房地产项目的代理销售机构之一。",
-    "繁体": "本宣傳網頁由註冊地產談判代表 Yee (Shyan Yee, REN46306) 管理維護，其所屬中介服務機構為大馬著名房產經紀公司 IQI Realty Sdn Bhd (執照註冊號: E(1)1584)。IQI Realty 是受委託推廣該房產項目的代理銷售機構之一。",
-    "JPN": "このデジタル表現は、IQI Realty Sdn Bhd（ライセンス番号: E(1)1584）より公認を受けた、登録不動産エージェントのYee（Shyan Yee, REN46306）によって運営されています。IQI Realtyは、当不動産開発プロジェクトの指定販売会社です。"
+  "This digital representation is managed by Yee (Shyan Yee, REN46305), a registered Real Estate Negotiator authorized under IQI Realty Sdn Bhd (Company License: E(1)1584). IQI Realty is an appointed agency for marketing real estate developments.": {
+    "简体": "本宣传网页由注册地产谈判代表 Yee (Shyan Yee, REN46305) 管理维护，其所属中介服务机构为大马著名房产经纪公司 IQI Realty Sdn Bhd (执照注册号: E(1)1584)。IQI Realty 是受委托推广该房地产项目的代理销售机构之一。",
+    "繁体": "本宣傳網頁由註冊地產談判代表 Yee (Shyan Yee, REN46305) 管理維護，其所屬中介服務機構為大馬著名房產經紀公司 IQI Realty Sdn Bhd (執照註冊號: E(1)1584)。IQI Realty 是受委託推廣該房產項目的代理銷售機構之一。",
+    "JPN": "このデジタル表現は、IQI Realty Sdn Bhd（ライセンス番号: E(1)1584）より公認を受けた、登録不動産エージェントのYee（Shyan Yee, REN46305）によって運営されています。IQI Realtyは、当不動産開発プロジェクトの指定販売会社です。"
   },
   "Developer Status": {
     "简体": "项目开发商主体说明",

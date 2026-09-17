@@ -52,7 +52,7 @@ export function PolicyModal({ activePolicyModal, setActivePolicyModal, t }: Poli
                   </div>
                   <div>
                     <h4 className="text-[#1A1A1A] mono font-semibold mb-1">{t("2. How We Use Your Data")}</h4>
-                    <p>{t("Your details are utilized strictly to respond to your registered request, share the digital access portfolio containing price indexes, and arrange scheduled private viewings. Your information is managed directly by Yee (REN46306) under IQI Realty Sdn Bhd.")}</p>
+                    <p>{t("Your details are utilized strictly to respond to your registered request, share the digital access portfolio containing price indexes, and arrange scheduled private viewings. Your information is managed directly by Yee (REN46305) under IQI Realty Sdn Bhd.")}</p>
                   </div>
                   <div>
                     <h4 className="text-[#1A1A1A] mono font-semibold mb-1">{t("3. Cookies & Advertising Protection")}</h4>
@@ -82,7 +82,7 @@ export function PolicyModal({ activePolicyModal, setActivePolicyModal, t }: Poli
                   </p>
                   <div>
                     <h4 className="text-[#1A1A1A] mono font-semibold mb-1">{t("1. Channel Status")}</h4>
-                    <p>{t("This platform acts as an independent marketing channel managed by Shyan Yee (REN46306) under IQI Realty Sdn Bhd. It is built as a portfolio presentation to introduce Orion Residence and is not the official developer website.")}</p>
+                    <p>{t("This platform acts as an independent marketing channel managed by Shyan Yee (REN46305) under IQI Realty Sdn Bhd. It is built as a portfolio presentation to introduce Orion Residence and is not the official developer website.")}</p>
                   </div>
                   <div>
                     <h4 className="text-[#1A1A1A] mono font-semibold mb-1">{t("2. Information Disclaimer")}</h4>
@@ -116,7 +116,7 @@ export function PolicyModal({ activePolicyModal, setActivePolicyModal, t }: Poli
                   </p>
                   <div>
                     <h4 className="text-[#1A1A1A] mono font-semibold mb-1">{t("Professional Agent Representation")}</h4>
-                    <p>{t("This digital representation is managed by Yee (Shyan Yee, REN46306), a registered Real Estate Negotiator authorized under IQI Realty Sdn Bhd (Company License: E(1)1584). IQI Realty is an appointed agency for marketing real estate developments.")}</p>
+                    <p>{t("This digital representation is managed by Yee (Shyan Yee, REN46305), a registered Real Estate Negotiator authorized under IQI Realty Sdn Bhd (Company License: E(1)1584). IQI Realty is an appointed agency for marketing real estate developments.")}</p>
                   </div>
                   <div>
                     <h4 className="text-[#1A1A1A] mono font-semibold mb-1">{t("Developer Status")}</h4>

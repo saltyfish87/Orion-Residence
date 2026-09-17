@@ -78,7 +78,7 @@ export function Hero({ t, scrollY }: HeroProps) {
           </div>
           <div className="mono text-white/90 hidden md:block text-right">
             <span className="text-[#D4AF37] block text-[9px] mb-0.5">{t("Developer")}</span>
-            Welton Group (REN46306)
+            Welton Group (REN46305)
           </div>
         </div>
       </div>

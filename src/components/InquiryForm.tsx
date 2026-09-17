@@ -249,7 +249,7 @@ export function InquiryForm({ t, selectedUnitId, setActivePolicyModal }: Inquiry
                     {t("Terms & Conditions")}
                   </button>
                   {", "}
-                  {t("and consent to Yee (REN46306) contacting me regarding Orion Residence.")}
+                  {t("and consent to Yee (REN46305) contacting me regarding Orion Residence.")}
                 </label>
               </div>
 

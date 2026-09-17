@@ -63,7 +63,7 @@ export function Footer({ t, setActivePolicyModal }: FooterProps) {
         <div>
           <h4 className="text-[#1A1A1A] font-serif uppercase tracking-[0.16em] text-xs font-semibold mb-4">{t("Disclaimers")}</h4>
           <p className="leading-relaxed text-xs text-[#B8860B] font-medium mb-3">
-            {t("This is an independent marketing website managed by Yee (REN46306) under IQI Realty Sdn Bhd. It is not the official developer website of Orion Tower Sdn. Bhd.")}
+            {t("This is an independent marketing website managed by Yee (REN46305) under IQI Realty Sdn Bhd. It is not the official developer website of Orion Tower Sdn. Bhd.")}
           </p>
           <p className="leading-relaxed text-[11px] text-[#666666]">
             {t("All illustrative renderings, conceptual drawings, room dimensions, specifications, and layout designs on this website are approximate and intended as a general guide only. The developer reserves the right to modify any aspect at their absolute discretion.")}
