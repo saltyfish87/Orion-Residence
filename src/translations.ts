@@ -1063,7 +1063,104 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "简体": "我已悉知",
     "繁体": "我已悉知",
     "JPN": "了解しました"
-  }
+  },
+  // FAQ section (added 2026-09-17; answers from the developer record)
+  "Frequently Asked Questions": {
+    "简体": "常见问题",
+    "繁体": "常見問題",
+    "JPN": "よくあるご質問"
+  },
+  "Answers for buyers": {
+    "简体": "买家常问",
+    "繁体": "買家常問",
+    "JPN": "ご購入検討の方へ"
+  },
+  "Questions buyers ask about Orion Residence, answered from the developer's materials.": {
+    "简体": "关于 Orion Residence 买家最常问的问题，答案取自发展商资料。",
+    "繁体": "關於 Orion Residence 買家最常問的問題，答案取自發展商資料。",
+    "JPN": "Orion Residence についてよくいただくご質問に、デベロッパー資料に基づいてお答えします。"
+  },
+  "Is Orion Residence freehold?": {
+    "简体": "Orion Residence 是永久地契吗？",
+    "繁体": "Orion Residence 是永久地契嗎？",
+    "JPN": "Orion Residence はフリーホールド（所有権）ですか？"
+  },
+  "Yes. Orion Residence on Jalan Gading, Bukit Bintang is a freehold development on a 0.56-acre site in Kuala Lumpur's golden triangle.": {
+    "简体": "是。Orion Residence 位于武吉免登 Jalan Gading，永久地契，地块 0.56 英亩，坐落于吉隆坡金三角。",
+    "繁体": "是。Orion Residence 位於武吉免登 Jalan Gading，永久地契，地塊 0.56 英畝，坐落於吉隆坡金三角。",
+    "JPN": "はい。ブキッ・ビンタンのJalan Gadingにある Orion Residence は、クアラルンプールのゴールデントライアングルに位置する0.56エーカーの敷地に建つフリーホールド物件です。"
+  },
+  "Who is the developer of Orion Residence?": {
+    "简体": "发展商是谁？",
+    "繁体": "發展商是誰？",
+    "JPN": "デベロッパーはどこですか？"
+  },
+  "Orion Tower Sdn Bhd, part of the Welton Group of Companies. This independent website is managed by Yee Woei Shyan (REN 46305) of IQI Realty Sdn Bhd.": {
+    "简体": "Orion Tower Sdn Bhd，隶属 Welton 集团。本独立网站由 IQI Realty Sdn Bhd 的 Yee Woei Shyan（REN 46305）管理。",
+    "繁体": "Orion Tower Sdn Bhd，隸屬 Welton 集團。本獨立網站由 IQI Realty Sdn Bhd 的 Yee Woei Shyan（REN 46305）管理。",
+    "JPN": "Welton グループ傘下の Orion Tower Sdn Bhd です。本サイトは IQI Realty Sdn Bhd の Yee Woei Shyan（REN 46305）が運営する独立サイトです。"
+  },
+  "How many units and storeys does Orion Residence have?": {
+    "简体": "有多少单位、多少层？",
+    "繁体": "有多少單位、多少層？",
+    "JPN": "戸数と階数は？"
+  },
+  "298 residences across 46 storeys, with 10 units per floor on levels 11 to 31 and 9 units per floor on levels 32 to 39.": {
+    "简体": "46 层共 298 个单位，11 至 31 层每层 10 户，32 至 39 层每层 9 户。",
+    "繁体": "46 層共 298 個單位，11 至 31 層每層 10 戶，32 至 39 層每層 9 戶。",
+    "JPN": "46階建て・全298戸。11〜31階は各階10戸、32〜39階は各階9戸です。"
+  },
+  "What unit sizes are available?": {
+    "简体": "有哪些面积？",
+    "繁体": "有哪些面積？",
+    "JPN": "どのような広さのユニットがありますか？"
+  },
+  "From 491 sq ft studios to 1,329 sq ft units, including studios with terraces, 2-bedroom and dual-key layouts. Units are fully furnished with designer-brand appliances.": {
+    "简体": "从 491 平方尺的开放式单位到 1,329 平方尺，含带露台的开放式单位、两房及双钥匙户型。单位全装修，配备设计师品牌电器。",
+    "繁体": "從 491 平方尺的開放式單位到 1,329 平方尺，含帶露台的開放式單位、兩房及雙鑰匙戶型。單位全裝修，配備設計師品牌電器。",
+    "JPN": "491平方フィートのスタジオから1,329平方フィートまで。テラス付きスタジオ、2ベッドルーム、デュアルキーの間取りがあり、デザイナーブランドの設備付きフルファニッシュです。"
+  },
+  "What is the starting price at Orion Residence?": {
+    "简体": "起价多少？",
+    "繁体": "起價多少？",
+    "JPN": "価格はいくらからですか？"
+  },
+  "From RM 1.58 million. Contact us for the current price list and availability.": {
+    "简体": "起价 RM 1.58 million。最新价目表与可售单位请联系我们。",
+    "繁体": "起價 RM 1.58 million。最新價目表與可售單位請聯繫我們。",
+    "JPN": "RM 1.58 million からです。最新の価格表と空き状況はお問い合わせください。"
+  },
+  "What facilities and services does Orion Residence offer?": {
+    "简体": "有哪些设施与服务？",
+    "繁体": "有哪些設施與服務？",
+    "JPN": "設備とサービスは？"
+  },
+  "Rooftop Sky Lounge, Moon Bar and fine dining with panoramic city views, an infinity pool, 5-star hotel-style hospitality services, automated concierge parking and a private security vault service managed by a Swiss security firm.": {
+    "简体": "屋顶 Sky Lounge、Moon Bar 与全景餐厅、无边泳池、五星酒店式服务、自动代客泊车系统，以及由瑞士保安公司管理的私人保险库服务。",
+    "繁体": "屋頂 Sky Lounge、Moon Bar 與全景餐廳、無邊泳池、五星酒店式服務、自動代客泊車系統，以及由瑞士保安公司管理的私人保險庫服務。",
+    "JPN": "ルーフトップのSky Lounge、Moon Bar、パノラマビューのファインダイニング、インフィニティプール、5つ星ホテル級のホスピタリティ、自動コンシェルジュパーキング、スイスのセキュリティ会社が管理するプライベート金庫サービスがあります。"
+  },
+  "When is Orion Residence expected to complete?": {
+    "简体": "预计何时竣工？",
+    "繁体": "預計何時竣工？",
+    "JPN": "完成予定はいつですか？"
+  },
+  "Completion is scheduled for 2025 according to the developer's materials. Ask us for the latest construction status.": {
+    "简体": "据发展商资料，预计 2025 年竣工。最新工程进度请向我们查询。",
+    "繁体": "據發展商資料，預計 2025 年竣工。最新工程進度請向我們查詢。",
+    "JPN": "デベロッパーの資料では2025年完成予定です。最新の工事状況はお問い合わせください。"
+  },
+  "How do I arrange a viewing or get the latest floor plans?": {
+    "简体": "如何预约看房或索取最新户型图？",
+    "繁体": "如何預約看房或索取最新戶型圖？",
+    "JPN": "内覧の予約や最新の間取り図はどうすれば？"
+  },
+  "WhatsApp Yee Woei Shyan (REN 46305, IQI Realty Sdn Bhd) at +60 10-827 8932, or use the enquiry form on this page.": {
+    "简体": "WhatsApp Yee Woei Shyan（REN 46305，IQI Realty Sdn Bhd）+60 10-827 8932，或填写本页咨询表格。",
+    "繁体": "WhatsApp Yee Woei Shyan（REN 46305，IQI Realty Sdn Bhd）+60 10-827 8932，或填寫本頁諮詢表格。",
+    "JPN": "Yee Woei Shyan（REN 46305、IQI Realty Sdn Bhd）へ WhatsApp +60 10-827 8932 でご連絡いただくか、本ページのお問い合わせフォームをご利用ください。"
+  },
+
 };
 
 /**

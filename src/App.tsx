@@ -9,6 +9,7 @@ import { Gallery } from "./components/Gallery";
 import { FloorPlans } from "./components/FloorPlans";
 import { Amenities } from "./components/Amenities";
 import { Neighborhood } from "./components/Neighborhood";
+import { FAQ } from "./components/FAQ";
 import { InquiryForm } from "./components/InquiryForm";
 import { Footer } from "./components/Footer";
 import { PolicyModal } from "./components/PolicyModal";
@@ -65,6 +66,7 @@ export function App() {
         />
         <Amenities t={t} />
         <Neighborhood t={t} />
+        <FAQ t={t} />
         <InquiryForm
           t={t}
           selectedUnitId={selectedUnitId}

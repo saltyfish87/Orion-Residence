@@ -45,130 +45,174 @@
     <!-- JSON-LD Structured Data for ApartmentComplex & RealEstateAgent (AISEO / GEO & Search Engines) -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ApartmentComplex",
+      "@id": "https://www.orionresidence.my/#property",
+      "name": "Orion Residence",
+      "description": "An exquisite 46-story ultra-luxury residential tower located in Bukit Bintang, Kuala Lumpur, offering bespoke serviced apartments, concierge services, and high-altitude infinity amenities.",
+      "url": "https://www.orionresidence.my/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Gading, Bukit Bintang",
+        "addressLocality": "Kuala Lumpur",
+        "addressRegion": "Wilayah Persekutuan",
+        "postalCode": "55100",
+        "addressCountry": "MY"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "3.147721",
+        "longitude": "101.713912"
+      },
+      "numberOfAccommodationUnits": {
+        "@type": "QuantitativeValue",
+        "value": 298,
+        "unitText": "luxury residence units"
+      },
+      "amenityFeature": [
         {
-          "@type": "ApartmentComplex",
-          "@id": "https://www.orionresidence.my/#property",
-          "name": "Orion Residence",
-          "description": "An exquisite 46-story ultra-luxury residential tower located in Bukit Bintang, Kuala Lumpur, offering bespoke serviced apartments, concierge services, and high-altitude infinity amenities.",
-          "url": "https://www.orionresidence.my/",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Jalan Gading, Bukit Bintang",
-            "addressLocality": "Kuala Lumpur",
-            "addressRegion": "Wilayah Persekutuan",
-            "postalCode": "55100",
-            "addressCountry": "MY"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "3.147721",
-            "longitude": "101.713912"
-          },
-          "numberOfAccommodationUnits": {
+          "@type": "LocationFeatureSpecification",
+          "name": "Astral Infinity Pool",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Stellar Sky Club & Gym",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Automated Mechanical Parking System",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "24/7 Concierge and Luxury Security Force",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Kevlar Concierge & Smart Living Systems",
+          "value": true
+        }
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "MYR",
+        "lowPrice": "1200000",
+        "highPrice": "3800000",
+        "offerCount": "298",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1200000",
+          "priceCurrency": "MYR",
+          "referenceQuantity": {
             "@type": "QuantitativeValue",
-            "value": 298,
-            "unitText": "luxury residence units"
-          },
-          "amenityFeature": [
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "Astral Infinity Pool",
-              "value": true
-            },
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "Stellar Sky Club & Gym",
-              "value": true
-            },
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "Automated Mechanical Parking System",
-              "value": true
-            },
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "24/7 Concierge and Luxury Security Force",
-              "value": true
-            },
-            {
-              "@type": "LocationFeatureSpecification",
-              "name": "Kevlar Concierge & Smart Living Systems",
-              "value": true
-            }
-          ],
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "MYR",
-            "lowPrice": "1200000",
-            "highPrice": "3800000",
-            "offerCount": "298",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "1200000",
-              "priceCurrency": "MYR",
-              "referenceQuantity": {
-                "@type": "QuantitativeValue",
-                "value": 1,
-                "unitCode": "unit"
-              }
-            }
+            "value": 1,
+            "unitCode": "unit"
+          }
+        }
+      }
+    },
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://www.orionresidence.my/#agent",
+      "name": "Yee Woei Shyan (REN 46305)",
+      "telephone": "+60108278932",
+      "email": "shyanyeews@gmail.com",
+      "url": "https://www.orionresidence.my/",
+      "image": "https://www.orionresidence.my/assets/orion_exterior.jpg",
+      "priceRange": "$$$$",
+      "memberOf": {
+        "@type": "RealEstateOrganization",
+        "name": "IQI Realty Sdn Bhd",
+        "alternateName": "IQI Global"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kuala Lumpur",
+        "addressCountry": "MY"
+      },
+      "knowsAbout": [
+        "Luxury Real Estate",
+        "Bukit Bintang Property",
+        "Kuala Lumpur Serviced Suites"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.orionresidence.my/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Orion Residence freehold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Orion Residence on Jalan Gading, Bukit Bintang is a freehold development on a 0.56-acre site in Kuala Lumpur's golden triangle."
           }
         },
         {
-          "@type": "RealEstateAgent",
-          "@id": "https://www.orionresidence.my/#agent",
-          "name": "Yee (REN46305)",
-          "telephone": "+6012-3456789",
-          "email": "shyanyeews@gmail.com",
-          "url": "https://www.orionresidence.my/",
-          "image": "https://www.orionresidence.my/assets/orion_exterior.jpg",
-          "priceRange": "$$$$",
-          "memberOf": {
-            "@type": "RealEstateOrganization",
-            "name": "IQI Realty Sdn Bhd",
-            "alternateName": "IQI Global"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kuala Lumpur",
-            "addressCountry": "MY"
-          },
-          "knowsAbout": ["Luxury Real Estate", "Bukit Bintang Property", "Kuala Lumpur Serviced Suites"]
+          "@type": "Question",
+          "name": "Who is the developer of Orion Residence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Orion Tower Sdn Bhd, part of the Welton Group of Companies. This independent website is managed by Yee Woei Shyan (REN 46305) of IQI Realty Sdn Bhd."
+          }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://www.orionresidence.my/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is Orion Residence Bukit Bintang?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Orion Residence is an ultra-luxury residential tower located in Bukit Bintang, Kuala Lumpur. It features high-end custom designed layouts, world-class amenities like an infinity pool and sky club, and is steps away from elite shopping malls like Pavilion KL."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Who is the official agent representing Orion Residence on this website?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "This independent website is managed by Yee (Shyan Yee, REN46305), a certified and registered Real Estate Negotiator representing IQI Realty Sdn Bhd. The official developer of the project is Orion Tower Sdn. Bhd. (Welton Group)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What are the floor plan and unit layouts in Orion Residence?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Orion Residence offers multiple luxury layouts: Type A1/A2 (495–538 sqft, 1 Bedroom Suite), Type B1/B2 (650–675 sqft, 1+1 Bedroom Suite), Type C1 (1,154 sqft, 2+1 Bedroom Suite), and Type D1 (1,329 sqft, 3 Bedroom Master Suite)."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "How many units and storeys does Orion Residence have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "298 residences across 46 storeys, with 10 units per floor on levels 11 to 31 and 9 units per floor on levels 32 to 39."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What unit sizes are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From 491 sq ft studios to 1,329 sq ft units, including studios with terraces, 2-bedroom and dual-key layouts. Units are fully furnished with designer-brand appliances."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the starting price at Orion Residence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From RM 1.58 million. Contact us for the current price list and availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What facilities and services does Orion Residence offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rooftop Sky Lounge, Moon Bar and fine dining with panoramic city views, an infinity pool, 5-star hotel-style hospitality services, automated concierge parking and a private security vault service managed by a Swiss security firm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is Orion Residence expected to complete?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Completion is scheduled for 2025 according to the developer's materials. Ask us for the latest construction status."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I arrange a viewing or get the latest floor plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WhatsApp Yee Woei Shyan (REN 46305, IQI Realty Sdn Bhd) at +60 10-827 8932, or use the enquiry form on this page."
+          }
         }
       ]
     }
+  ]
+}
     </script>
   </head>
   <body class="bg-[#F8F7F4] text-[#1A1A1A] font-sans antialiased selection:bg-[#B8860B] selection:text-white">
