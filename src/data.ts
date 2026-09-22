@@ -491,7 +491,7 @@ export const UNIT_TYPES: UnitType[] = [
     bedrooms: 4,
     bathrooms: 4,
     startingPrice: "From RM 3,300,000",
-    viewDirection: "Direct 360° View of KLCC & TRX Towers",
+    viewDirection: "Direct 360° View of KL City Centre & TRX Towers",
     balconyOrientation: "Dual Aspect (Corner South-East)",
     description: "The crown jewel of Orion Residence. Palatial double-volume living salon, dedicated private lift vestibule, chef wet & dry kitchen, and sweeping balconies looking straight toward Tun Razak Exchange.",
     keyFeatures: [
@@ -543,7 +543,7 @@ export const UNIT_TYPES: UnitType[] = [
         id: "d4-balcony",
         name: "L-Shaped 270° Sky Deck",
         dimensions: "1.8m x 6.2m",
-        description: "Sweeping structural glass terrace looking directly across KLCC and Tun Razak Exchange.",
+        description: "Sweeping structural glass terrace looking directly across KL City Centre and Tun Razak Exchange.",
         materials: "Premium Burmese Teak Deck, Structural Glass Railing",
         svgPath: "M 20 190 H 300 V 240 H 20 Z",
         cx: 160,
