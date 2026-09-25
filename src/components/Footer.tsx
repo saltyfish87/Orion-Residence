@@ -74,6 +74,7 @@ export function Footer({ t, setActivePolicyModal }: FooterProps) {
 
       <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-[#E5E2DC] text-center flex flex-col sm:flex-row justify-between items-center gap-4 text-[#666666] text-xs font-mono">
         <p>© 2026 Orion Tower Sdn. Bhd. (1292635-X) & Welton Group. All Rights Reserved.</p>
+        <p className="mt-2">Also listed on <a href="https://www.propertyportal.my/project/orion-bid" className="underline">propertyportal.my: Orion Residence</a> · <a href="https://www.propertyportal.my/" className="underline">all Kuala Lumpur new launches</a>.</p>
         <div className="flex gap-4">
           <button onClick={() => setActivePolicyModal("privacy")} className="hover:text-[#B8860B] transition-colors cursor-pointer">{t("Privacy Policy")}</button>
           <button onClick={() => setActivePolicyModal("terms")} className="hover:text-[#B8860B] transition-colors cursor-pointer">{t("Terms & Conditions")}</button>
