@@ -73,8 +73,8 @@ export function Hero({ t, scrollY }: HeroProps) {
             46 Storeys / 298 Units
           </div>
           <div className="mono text-white/90">
-            <span className="text-[#D4AF37] block text-[9px] mb-0.5">{t("Prestige Status")}</span>
-            From RM 1.2M
+            <span className="text-[#D4AF37] block text-[9px] mb-0.5">{t("Tenure")}</span>
+            {t("Freehold")}
           </div>
           <div className="mono text-white/90 hidden md:block text-right">
             <span className="text-[#D4AF37] block text-[9px] mb-0.5">{t("Developer")}</span>

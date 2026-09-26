@@ -21,8 +21,8 @@ export const FAQ_ITEMS = [
     "a": "From 491 sq ft studios to 1,329 sq ft units, including studios with terraces, 2-bedroom and dual-key layouts. Units are fully furnished with designer-brand appliances."
   },
   {
-    "q": "What is the starting price at Orion Residence?",
-    "a": "From RM 1.58 million. Contact us for the current price list and availability."
+    "q": "How do I get the current prices at Orion Residence?",
+    "a": "Prices are set by the developer. Contact us for the current price list and availability."
   },
   {
     "q": "What facilities and services does Orion Residence offer?",

@@ -93,11 +93,6 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "繁体": "尊崇起價",
     "JPN": "プレステージ価格"
   },
-  "From RM 1.2M": {
-    "简体": "120万令吉起",
-    "繁体": "120萬令吉起",
-    "JPN": "120万RMから"
-  },
 
   // Overview
   "The Overview": {
@@ -414,6 +409,21 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "简体": "阳台朝向",
     "繁体": "陽台朝向",
     "JPN": "バルコニー方位"
+  },
+  "Price list on request": {
+    "简体": "价格表请向我们索取",
+    "繁体": "價格表請向我們索取",
+    "JPN": "価格表はお問い合わせください"
+  },
+  "Tenure": {
+    "简体": "地契",
+    "繁体": "地契",
+    "JPN": "権利形態"
+  },
+  "Freehold": {
+    "简体": "永久地契",
+    "繁体": "永久地契",
+    "JPN": "フリーホールド"
   },
   "Starting Price": {
     "简体": "专属起售价",
@@ -1124,11 +1134,6 @@ export const dictionary: Record<string, Record<Exclude<Lang, "ENG">, string>> = 
     "简体": "起价多少？",
     "繁体": "起價多少？",
     "JPN": "価格はいくらからですか？"
-  },
-  "From RM 1.58 million. Contact us for the current price list and availability.": {
-    "简体": "起价 RM 1.58 million。最新价目表与可售单位请联系我们。",
-    "繁体": "起價 RM 1.58 million。最新價目表與可售單位請聯繫我們。",
-    "JPN": "RM 1.58 million からです。最新の価格表と空き状況はお問い合わせください。"
   },
   "What facilities and services does Orion Residence offer?": {
     "简体": "有哪些设施与服务？",

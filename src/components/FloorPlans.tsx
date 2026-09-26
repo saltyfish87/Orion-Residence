@@ -174,7 +174,7 @@ export function FloorPlans({ selectedUnitId, setSelectedUnitId, t }: FloorPlansP
                     <div>
                       <span className="mono text-[#666666] block mb-0.5">{t("Starting From")}</span>
                       <span className="text-sm text-[#B8860B] font-mono font-semibold block pt-1">
-                        {selectedUnit.startingPrice}
+                        {t("Price list on request")}
                       </span>
                     </div>
                   </div>
